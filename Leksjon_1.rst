@@ -1,0 +1,107 @@
+| ``= Introduksjon til standardoppsett på maskinparken =``
+| ``* Vindutast + 1 => terminalvindu (bash)``
+| ``* Vindutast + 2 => nettleser (chromium)``
+| ``* Vindutast + 3 => editor (emacs)``
+| ``* Vindutast + 4 skal vi etterhvert bruke til python og turtle graphics``
+| ``* Vindutast + w => skjul vindu``
+| ``* Vindutast + W => finn skjulte vinduer``
+| ``* Vindutast + space => endre vindusoppsett (hvis det er fler enn ett vindu)``
+| ``* Vindutast + enter => velge "arbeidsvindu"``
+| ``* Vindutast + shift + enter => nytt terminalvindu``
+| ``* Vindutast + shift + tall => flytte vindu``
+| ``* Skriv "man spectrwm" i terminalvinduet for å finne ut mer``
+| ``= Programmeringsspråk, kommandoer, skilpaddegrafikk =``
+| ``Det finnes mange forskjellige programmeringsspråk.  Har du hørt om noen av disse?``
+| ``* C``
+| ``* Pascal``
+| ``* Basic (Visual Basic)``
+| ``* C++``
+| ``* Flash``
+| ``* Java``
+| ``* Logo``
+| ``* Bash``
+| ``* Javascript``
+| ``* Assembler``
+| ``* Lisp``
+| ``* Fortran``
+| ``* Cobolt``
+| ``* Perl``
+| ``* Ruby``
+| ``== Bash ==``
+| *``Terminalvinduet``*\ `` kjører noe et program som heter ``\ *``bash``*\ ``.  Her kan man starte opp andre programmer, slik som ``\ *``chromium``*\ ``, ``\ *``firefox``*\ ``, ``\ *``luola``*\ ``, ``\ *``hedgewars``*\ `` etc.  Bash er også et programmeringsspråk.  Bash kan ikke brukes til å lage komplekse ting, som spill.  På disse maskinene kan man trykke vindu-shift-enter for å få opp et nytt terminalvindu.``
+| ``Trykk vindustast+1 for å komme til terminalvinduet og vindustast+2 til å komme til nettleser.``
+| ``== Python ==``
+| ``Vi skal lære et språk som heter ``\ *``Python``*\ ``.  Det er et av de letteste språkene å lære seg, samtidig som at det også er lett å lage avanserte ting i Python.  To ganger i året holdes det en internasjonal konkurranse ``\ *``PyWeek``*\ `` hvor deltagerene får en uke på seg til å lage et spill i Python.  Vi skal se litt på enkelte av disse spillene senere.  Jeg har brukt python mye på jobb.``
+| ``== Språk ==``
+| ``De fleste programmeringsspråkene ble laget i USA, og vi bruker vanligvis engelsk i programmeringen.  Det er mulig å oversette programmeringsspråk.  ``\ *``Logo``*\ `` er et gammelt opplæringsspråk som ble oversatt til norsk da jeg var rundt ni år gammel.  Det er også mulig å lage spesialversjoner av f.eks. python hvor de fleste kommandoene er på norsk.``
+| ``Nå skal vi bruke engelsk programmeringsspråk, men norske navn på det vi lager selv.``
+| ``Senere bør dere skrive alt på engelsk.  Når dere senere skal dele programvare med hele verden, så må man bruke engelsk.``
+| ``== Kommandoer ==``
+| ``Et program kan bestå av en rekke ``\ *``kommandoer``*\ `` som får datamaskinen til å gjøre forskjellige ting.  Her kommer noen eksempler på kommandoer:``
+| ``=== Bash ===``
+| ``Skrive noe til skjerm:``
+| `` echo "hei"``
+| ``(echo betyr "ekko")``
+| ``Starte nettleseren "firefox":``
+| `` firefox``
+| ``Starte "python":``
+| `` python``
+| ``=== Python ===``
+| ``Skrive noe til skjerm:``
+| `` print("Hei!")``
+| ``("print" betyr å "skrive ut" eller "trykke", som i "trykke en bok")``
+| ``Starte nettleseren "firefox":``
+| `` from subprocess import call``
+| `` call("firefox")``
+| ``== "Turtle Graphics" (skilpaddegrafikk) ==``
+| ``Det var en gang en robot som het "turtle" (skilpadde).  Denne kunne kjøre på et ark, og den holdt en penn som kunne tas opp og ned.``
+| ``For å styre roboten ble det laget et programmeringsspråk som het Logo.  Her brukte man kommandoer av typen "forward" (fremover), "backward" (bakover), "left" (venstre), "right" (høyre).  Man kunne også gi kommandoene up() (løft penna) og down() (ta ned penna).``
+| ``(Logo ble oversatt til norsk på åttitallet - jeg tror kommandoene var "fram", "bak", "venstre", "høyre" men husker ikke helt). ``
+| ``Skilpaddegrafikken har vi tilgang til i Python også.  Prøv:``
+| `` from turtle import *``
+| `` forward(120)``
+| `` left(90)``
+| `` forward(60)``
+| `` left(90)``
+| `` forward(120)``
+| `` left(90)``
+| `` forward(60)``
+| ``== Oppgaver ==``
+| ``* Lag fire rektangler``
+| ``* Fri lek med "Turtle Graphics"``
+| ``= Neste leksjon =``
+| ``I ``\ ```Leksjon``\ ````\ ``2`` <Leksjon_2>`__\ `` skal vi lære om ``\ *``variabler``*\ ``, ``\ *``konstanter``*\ ``, de fire regneartene og vinkler.``
+| ``= Bonusinformasjon til leksjon 1 =``
+| ``== Flere skilpadde-kommandoer ==``
+| ``Vi kan skifte farge også underveis:``
+| `` color('red')``
+| `` forward(15)``
+| `` color('blue')``
+| `` forward(15)``
+| ``Gjort noe feil?  Vi kan "viske" ved å bruke hvitt:``
+| `` forward(30)``
+| `` color('white')``
+| `` back(30)``
+| `` color('red')``
+| `` forward(15)``
+| ``Forflytninger uten å tegne?  Vi kan løfte penna opp og sette den ned:``
+| `` up()``
+| `` forward(30)``
+| `` down()``
+| ``Det finnes mange flere kommandoer.``
+| `` import turtle``
+| `` dir(turtle)``
+| `` help(turtle)``
+| ``== Kommandoer vs prosedyrer vs ... ==``
+| ``Forskjellige typer kommandoer kan ha litt forskjellige navn i forskjellige språk:``
+| ``* Prosedyrer``
+| ``* Funksjoner``
+| ``* Metoder``
+| ``* Programmer``
+| ``* Script``
+| ``* Rutiner``
+| ``* Subrutiner``
+| ``Jeg skal prøve å stort sett si "kommando" for alt over, men vi kommer til å bruke uttrykkene "funksjon" og "program" også.  Hva kjennetegner et ``\ *``program``*\ ``?``
+| ``== Språk ==``
+| ``"Bash" uttales ofte "bæsj", men husk på ... bash er ikke bæsj!``
+| ``I dag er engelsk "lingua franca".  Skal man snakke med noen fra et annet sted i verden, så snakker man engelsk.  Det har ikke alltid vært slik.  Kanskje kinesisk eller arabisk vil bli "lingua franca" når dere blir gamle.``
