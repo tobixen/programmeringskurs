@@ -1,0 +1,127 @@
+ Programmerere liker ikke å skrive de samme kommandoene om og om igjen - og dessuten blir det ikke gode programmer av å bare liste opp kommandoer.  
+ 
+ = Løkker =
+ 
+ Ei ''løkke'' ("loop", tildels "scope") er en programsnutt som kan kjøres flere ganger.  I nesten alle programmeringsspråk har man mulighet for å definere nye kommandoer, og dessuten begrepene ''for'', ''while'' ("mens"), ''if'' (hvis) - og av og til ''repeat ... until'' (repeter ... inntil).  I dag skal vi se på ''for''.
+ 
+ == Løkker i ulike programmeringsspråk ==
+ 
+ I de fleste språk markerer man at en løkke har en begynnelse og en slutt.  F.eks. i pascal bruker man ''begin'' (begynn eller begynnelse) og ''end'' (slutt eller stopp):
+ 
+  begin
+      writeln("hei!");
+  end
+ 
+ I C, perl og mange andre språk bruker man slike spesialparanteser: {}
+ 
+  {
+      print "hei!";
+  }
+ 
+ I bash kan man bruke ''do'' ("gjør") og ''done'' ("gjort") f.eks.:
+ 
+  for person in 'storebror' 'lillebror' 'mamma' 'pappa'
+  do
+      echo "Hei $person"
+  done
+ 
+ (bash-koden kan dere prøve ut!)
+ 
+ Legg merke til bruken av mellomrom over, såkalt ''indentering'' (eller ''innskutt tekst'').  Indentering gjør det lett å lese og forstå programmet.  Indentering er pent.  Programmet kan virke fint uten identering.  Både i Pascal, Perl og Bash kan man skrive store programmer på bare ei linje hvis man vil.  Alt ovenfor kan fint skrives på en linje:
+ 
+ Pascal:
+  begin writeln("hei!"); end
+ 
+ Perl:
+  { print "hei!"; }
+ 
+ Bash:
+  for person in 'storebror' 'lillebror' 'mamma' 'pappa'; do echo "Hei $person" ; done
+ 
+ I python er det anderledes.  Man skriver aldri mer enn én kommando på ei linje.  Dersom en linje slutter med et kolon (:) betyr det "her kommer det ei løkke", løkka identeres, og identeringa markerer hvor løkka slutter.  Eksempel:
+ 
+  for person in ('storebror', 'lillebror', 'mamma', 'pappa'):
+      print("Hei " + person)
+      print()
+  print("Er det middag snart?")
+ 
+ = For-løkker i python =
+ 
+ ''for'' brukes for å repetere en programsnutt et visst antall ganger, eller ''for alt som er i ei liste''.
+ 
+ Her er et mer avansert eksempel:
+ 
+  n = 1
+  for person in ('storebror', 'lillebror', 'mamma', 'pappa'):
+   print("Hei " + person)
+   print("Du er nummer " + str(n))
+   n = n + 1
+   print()
+ 
+ Fire mellomrom er normalt:
+ 
+  n = 1
+  for person in ('storebror', 'lillebror', 'mamma', 'pappa'):
+      print("Hei " + person)
+      print("Du er nummer " + str(n))
+      n = n+1
+      print()
+ 
+ Men dette blir feil:
+ 
+  n = 1
+  for person in ('storebror', 'lillebror', 'mamma', 'pappa'):
+    print("Hei " + person)
+      print("Du er nummer " + str(n))
+        n = n+1
+          print()
+ 
+ Dette blir litt feil ... kan du tenke deg hva som skjer?
+ 
+  n = 1
+  for person in ('storebror', 'lillebror', 'mamma', 'pappa'):
+      print("Hei " + person)
+  
+  print("Du er nummer " + str(n))
+  n = n + 1
+  print()
+ 
+ == ''range'' ==
+ 
+ Av og til har man behov for f.eks. "gjør dette 100 ganger", eller "tell fra 1 til 100".  Da kan man bruke funksjonen "range".  Her er et eksempel:
+ 
+  for teller in range(0, 10):
+      print(teller)
+ 
+ Hvilke tall ble skrevet ut over?  Hva er det siste tallet som blir skrevet ut?  Hvor mange tall ble skrevet ut?  Hvor mange tall blir skrevet ut dersom dere bruker ''range(1, 10)''?  Eller ''range(1, 101)''?  Dette kan være litt vanskelig ...
+ 
+ Med ''turtle graphics'' kan man lage ganske mange stilige figurer ved bruk av enkle for-løller.  Her er noen eksempler:
+ 
+  for a in range(0, 100):
+      forward(a*10)
+      left(90)
+ 
+  reset()
+  for a in range(0,100):
+      forward(a*10)
+      left(91)
+ 
+  reset()
+  for a in range(0,100):
+      forward(a*10)
+      left(100)
+ 
+  reset()
+  for a in range(0,10000):
+      forward(a/1000)
+      left(1)
+ 
+ = Oppgave =
+ 
+ * Lek videre med løkker!
+ * Kan du lage en sirkel?
+ 
+ = Neste leksjon =
+ 
+ Når man programmerer er det ofte bra å være lat!  I [[leksjon 4]] skal vi se på hvordan vi kan lage nye kommandoer.  Dette sparer oss for masse skriving.
+
